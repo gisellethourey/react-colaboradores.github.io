@@ -1,5 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 const Listado = ({ informacion, setArchivo, dataFileFilter, setDataFileFilter }) => {
 
   function deleteEmployee(id) {
@@ -23,14 +24,16 @@ const Listado = ({ informacion, setArchivo, dataFileFilter, setDataFileFilter })
       <td>{colaborador.cargo}</td>
       <td>{colaborador.telefono}</td>
       <td>
-      <button onClick={() => deleteEmployee(colaborador.id)}>
-          </button>
+        <Button variant= "primary">Borrar</Button>{' '}
+      <i className=''
+      id = 'delete' 
+      onClick={() => deleteEmployee(colaborador.id)}>
+          </i>
       </td>
     </tr>
   ));
 
   return (
-
     <div>
     <Table responsive="sm">
       <thead>
@@ -43,6 +46,7 @@ const Listado = ({ informacion, setArchivo, dataFileFilter, setDataFileFilter })
            <th>Borrar</th> 
           </tr>
         </thead>
+        
         <tbody>{colaboradores}</tbody>
       </Table>
     </div>
