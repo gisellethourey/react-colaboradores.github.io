@@ -193,9 +193,7 @@ const Formulario = ({ addAlert, informacion, setArchivo, dataFileFilter, setData
             value={employeeData.telefono}
           />
         </div>
-
-        <button type="submit" className="btn btn-success" >Agregar Colaborador</button>
-      
+        <button type="submit" className="btn btn-danger" >Agregar Colaborador</button>
       </form>
     </div>
   );
