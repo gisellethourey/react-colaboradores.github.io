@@ -23,11 +23,8 @@ const Listado = ({ informacion, setArchivo, dataFileFilter, setDataFileFilter })
       <td>{colaborador.cargo}</td>
       <td>{colaborador.telefono}</td>
       <td>
-        <i
-          className="fa-solid fa-user-xmark"
-          id='delete'
-          onClick={() => deleteEmployee(colaborador.id)}
-        ></i>
+      <button onClick={() => deleteEmployee(colaborador.id)}>
+          </button>
       </td>
     </tr>
   ));
@@ -43,6 +40,7 @@ const Listado = ({ informacion, setArchivo, dataFileFilter, setDataFileFilter })
             <th>Edad</th>
             <th>Cargo</th>
             <th>Telefono</th>
+           <th>Borrar</th> 
           </tr>
         </thead>
         <tbody>{colaboradores}</tbody>
